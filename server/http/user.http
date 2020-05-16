@@ -1,0 +1,30 @@
+POST http://localhost:3001/api/user/reg
+Content-Type: application/json
+
+{
+  "nickname": "kittylang",
+  "username": "kittylang",
+  "password": "123456",
+  "rePassword": "123456",
+  "codeToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHIiOiJSSFBCIiwiaWF0IjoxNTg5MTAwMDk3LCJleHAiOjE1ODkxMDM2OTd9._5wxXX6D3aMld1Ld5_Uk-v3QwE2_6kPj5V9kt0VrXHg",
+  "code": "RHPB"
+}
+
+###
+
+POST http://localhost:3001/api/user/login
+Content-Type: application/json
+
+{
+  "username": "kittylang",
+  "password": "123456",
+  "codeToken" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHIiOiI0UVRXIiwiaWF0IjoxNTg5MTAxNjA5LCJleHAiOjE1ODkxMDE3ODl9.HlK-PSupcxuwwWLZyzbfQ3ycKnggYcmHKBZvHcra9GE",
+  "code": "4QTW"
+}
+
+###
+
+GET http://localhost:3001/api/verifycode
+Accept: application/json
+
+###

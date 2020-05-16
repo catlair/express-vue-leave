@@ -1,0 +1,21 @@
+DELETE http://localhost:3001/api/leave/5ebbb4a6b11cbb27947e4568
+Accept: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHIiOiJhNjY1YTQ1OTIwNDIyZjlkNDE3ZTQ4NjdlZmRjNGZiOGEwNGExZjNmZmYxZmEwN2U5OThlODZmN2Y3YTI3YWUzIiwiaWF0IjoxNTg5MzU5NzYyLCJleHAiOjE1ODkzNjMzNjJ9.o_RgQ3pgaoLZ2ChkR2dIYYRy7OEDmvKqh66FGiYFmNA
+
+###
+
+GET http://localhost:3001/api/leave?page=1&size=1
+Accept: application/json
+
+###
+
+POST http://localhost:3001/api/leave
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdHIiOiJraXR0eWxhbmciLCJpYXQiOjE1ODkwNzk1MDAsImV4cCI6MTU4OTA4MzEwMH0.gYt7Nh-MY2q7OWyKTkPMeobcqsEdH-iyz3l4EiSdzJI
+
+{
+  "content": "来自用户coder的留言"
+}
+
+###
+

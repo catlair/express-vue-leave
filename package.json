@@ -1,0 +1,17 @@
+{
+  "name": "leave",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "concurrently \"cd client/ && npm run serve\"  \"cd server/ && npm run dev\"",
+    "client": "cd client/ && npm run serve",
+    "server": "cd server/ && npm run dev",
+    "install": "cd client/ && npm install && cd ../server && npm install"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.2.0"
+  }
+}

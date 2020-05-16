@@ -1,0 +1,332 @@
+define({ "api": [
+  {
+    "type": "post",
+    "url": "/leave",
+    "title": "添加留言",
+    "name": "addLeave",
+    "group": "Leave",
+    "version": "0.1.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>用户token</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "content",
+            "description": "<p>留言内容.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "routers/leave.js",
+    "groupTitle": "Leave"
+  },
+  {
+    "type": "delete",
+    "url": "/leave/:id",
+    "title": "删除留言",
+    "name": "deleteLeave",
+    "group": "Leave",
+    "version": "0.1.0",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>用户token</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "id",
+            "description": "<p>留言信息的id.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "routers/leave.js",
+    "groupTitle": "Leave"
+  },
+  {
+    "type": "get",
+    "url": "/leave",
+    "title": "获取留言",
+    "name": "getLeave",
+    "group": "Leave",
+    "version": "0.1.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "page",
+            "description": "<p>获取的页码数.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "size",
+            "description": "<p>每一页的留言数量.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "total",
+            "description": "<p>留言总数.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "page",
+            "description": "<p>获取的页码数.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Number",
+            "optional": false,
+            "field": "size",
+            "description": "<p>每一页的留言数量.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "routers/leave.js",
+    "groupTitle": "Leave"
+  },
+  {
+    "type": "post",
+    "url": "/user/login",
+    "title": "用户登录",
+    "name": "loginUser",
+    "group": "User",
+    "version": "0.1.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>用户账号.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>用户密码.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "codeToken",
+            "description": "<p>验证码的校验值.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>验证码.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "nickname",
+            "description": "<p>用户昵称,用于显示.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "routers/user.js",
+    "groupTitle": "User"
+  },
+  {
+    "type": "get",
+    "url": "/user",
+    "title": "用户查询",
+    "name": "queryUser",
+    "group": "User",
+    "version": "0.1.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "_id",
+            "description": "<p>用户id.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "nickname",
+            "description": "<p>用户昵称,用于显示.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "routers/user.js",
+    "groupTitle": "User"
+  },
+  {
+    "type": "post",
+    "url": "/user/reg",
+    "title": "用户注册",
+    "name": "regUser",
+    "group": "User",
+    "version": "0.1.0",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "nickname",
+            "description": "<p>用户昵称,用于显示.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>用户账号.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>用户密码.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "rePassword",
+            "description": "<p>重复密码.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "codeToken",
+            "description": "<p>验证码的校验值.</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>验证码.</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "nickname",
+            "description": "<p>用户昵称,用于显示.</p>"
+          }
+        ]
+      }
+    },
+    "filename": "routers/user.js",
+    "groupTitle": "User"
+  },
+  {
+    "type": "get",
+    "url": "/verifycode",
+    "title": "获取图片验证码",
+    "name": "verifyCodeImg",
+    "group": "VerifyCode",
+    "version": "0.1.0",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>验证码的校验码.</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "img",
+            "description": "<p>base64验证码图片.</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "成功响应",
+          "content": "\n{\n\"token\": \"sjdh.asgdjh.kashdk\",\n\"img\": \"data:image/bmp;base64,dsfldsjfklsdj\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "routers/other.js",
+    "groupTitle": "VerifyCode"
+  }
+] });

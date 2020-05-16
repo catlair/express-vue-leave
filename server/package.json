@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gd-bmp": "^1.2.4",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.11.0",
+    "koa-bodyparser": "^4.3.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^3.2.1",
+    "koa-onerror": "^4.1.0",
+    "koa-router": "^8.0.8",
+    "koa-static": "^5.0.0",
+    "koa2-cors": "^2.0.6",
+    "mongoose": "^5.9.12"
+  },
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "apidoc -i routers/ -o apidoc/ && pm2 start app.js --name leave",
+    "apidoc": "apidoc -i routers/ -o apidoc/"
+  },
+  "devDependencies": {
+    "apidoc": "^0.22.1",
+    "nodemon": "^2.0.3"
+  }
+}
