@@ -47,6 +47,7 @@ router.beforeEach((to, from, next) => {
   let token = store.state.user.token;
   //判断要去的路由有没有requiresAuth
   if (to.meta.requiresAuth) {
+    //需要验证token是否有效
     if (token) {
       next();
     } else {
